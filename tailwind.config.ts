@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +53,27 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom pastel colors
+				mint: {
+					DEFAULT: 'hsl(var(--mint))',
+					light: 'hsl(var(--mint-light))',
+					dark: 'hsl(var(--mint-dark))'
+				},
+				coral: {
+					DEFAULT: 'hsl(var(--coral))',
+					light: 'hsl(var(--coral-light))',
+					dark: 'hsl(var(--coral-dark))'
+				},
+				lavender: {
+					DEFAULT: 'hsl(var(--lavender))',
+					light: 'hsl(var(--lavender-light))',
+					dark: 'hsl(var(--lavender-dark))'
+				},
+				'baby-blue': {
+					DEFAULT: 'hsl(var(--baby-blue))',
+					light: 'hsl(var(--baby-blue-light))',
+					dark: 'hsl(var(--baby-blue-dark))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -66,7 +88,23 @@ export default {
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				xl: 'calc(var(--radius) + 4px)',
+				'2xl': 'calc(var(--radius) + 8px)'
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-button': 'var(--gradient-button)'
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'gentle': 'var(--shadow-gentle)',
+				'floating': 'var(--shadow-floating)'
+			},
+			transitionTimingFunction: {
+				'gentle': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
 			},
 			keyframes: {
 				'accordion-down': {
