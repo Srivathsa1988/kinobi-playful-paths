@@ -5,7 +5,7 @@ import cowatchImage from "@/assets/cowatch-jr-hero.jpg";
 import halowiseImage from "@/assets/halowise-hero.jpg";
 
 interface BuddiesSectionProps {
-  onWaitlistClick: () => void;
+  onWaitlistClick: (product: string) => void;
 }
 
 export const BuddiesSection = ({ onWaitlistClick }: BuddiesSectionProps) => {
@@ -90,10 +90,10 @@ export const BuddiesSection = ({ onWaitlistClick }: BuddiesSectionProps) => {
                   <p className="text-sm text-muted-foreground italic mb-4">
                     Coming soon — Join waitlist
                   </p>
-                  <Button 
+                    <Button 
                     variant="floating" 
                     size="sm" 
-                    onClick={onWaitlistClick}
+                    onClick={() => onWaitlistClick(buddy.title)}
                     className="w-full"
                   >
                     Join Waitlist

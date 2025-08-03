@@ -8,9 +8,10 @@ import { useToast } from "@/components/ui/use-toast";
 interface WaitlistModalProps {
   open: boolean;
   onClose: () => void;
+  source: string;
 }
 
-export const WaitlistModal = ({ open, onClose }: WaitlistModalProps) => {
+export const WaitlistModal = ({ open, onClose, source }: WaitlistModalProps) => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
@@ -35,7 +36,7 @@ export const WaitlistModal = ({ open, onClose }: WaitlistModalProps) => {
         formData.append('user_sub_type', 'waitlist');
         formData.append('user_id', userId);
         formData.append('email_id', email);
-        formData.append('prod_selection', 'default');
+        formData.append('prod_selection', source);
         formData.append('timestamp', new Date().toISOString());
 
         fetch('https://script.google.com/macros/s/AKfycbyBKafEvoe9IMX57RtP7ZuUEglvu1HVhy2RUAeBHfjdMoBgcEyDckvB7Wi2jzCyXAeG/exec', {

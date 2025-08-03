@@ -12,6 +12,8 @@ import { useState } from "react";
 import KinobiSurvey from "@/components/Kinobi/KinobiSurvey";
 
 import { WaitlistModal } from "@/components/Kinobi/WaitlistModal";
+import { ParentQuotes } from '@/components/Kinobi/ParentQuotes';
+import { ExpertSection } from '@/components/Kinobi/ExpertSection';
 
 
 const Index = () => {
@@ -27,9 +29,11 @@ const Index = () => {
   }, []);
 
   const [showWaitlist, setShowWaitlist] = useState(false);
+  const [waitlistSource, setWaitlistSource] = useState('');
 
   const handleWaitlistClick = (source = 'landing') => {
     trackWaitlistClick(source);
+    setWaitlistSource(source);
     setShowWaitlist(true);
     // In production, this would open a modal or redirect to a signup form
   };
@@ -71,13 +75,14 @@ const Index = () => {
         onQuizClick={() => handleQuizClick('hero')} 
       />
       
-      <BuddiesSection 
-        onWaitlistClick={() => handleWaitlistClick('buddies')} 
-      />
-      
-      <TestimonialsSection />
-      
-      <IAPSection />
+      <BuddiesSection onWaitlistClick={(title) => handleWaitlistClick(title)} />
+
+      <ParentQuotes />
+      <ExpertSection />
+
+      {/*<TestimonialsSection />
+
+      <IAPSection />*/}
       
       <WhyKinobiSection />
       
@@ -99,7 +104,9 @@ const Index = () => {
       </div>
       </div>
     )}
-    <WaitlistModal open={showWaitlist} onClose={() => setShowWaitlist(false)} />
+    <WaitlistModal open={showWaitlist} onClose={() => setShowWaitlist(false)} 
+    source={waitlistSource}
+    />
     </div>
   );
 };
