@@ -66,8 +66,9 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
             Take a 30-sec Quiz
           </Button>
 
-          {scrollIndicatorVisible && (
-            <div>
+        </div>
+        {scrollIndicatorVisible && (
+            <div className="mt-6 flex justify-center">
             {/* <div className="lg:hidden"> <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 lg:hidden">*/}
               <button
                 onClick={handleScrollToBuddies}
@@ -84,8 +85,7 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
               </button>
             </div>
           )
-          }
-        </div>
+        }
         
         {/* Scroll indicator */}
         {/*<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
