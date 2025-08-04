@@ -21,7 +21,7 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
       <div className="absolute bottom-40 left-20 w-10 h-10 bg-mint-light rounded-full opacity-25 animate-bounce" style={{animationDelay: '2s'}} />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
           🌱 Raise mindful kids in a digital world —{" "}
           <span className="text-mint-dark font-bold">without fights, force, or guilt</span>
         </h1>
