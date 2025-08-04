@@ -25,7 +25,8 @@ export const WhyKinobiSection = () => {
                   key={index} 
                   className="flex items-center gap-3 text-foreground"
                 >
-                  <span className="text-primary text-lg">✅</span>
+                  <span className="text-success mt-0.5">✓</span>
+                  
                   <span className="font-medium">{benefit}</span>
                 </li>
               ))}

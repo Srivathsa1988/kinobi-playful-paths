@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 
+
 export default {
 	darkMode: ["class"],
 	content: [
@@ -57,6 +58,7 @@ export default {
 				// Custom pastel colors
 				mint: {
 					DEFAULT: 'hsl(var(--mint))',
+					soft: 'hsl(var(--mint-soft))',
 					light: 'hsl(var(--mint-light))',
 					dark: 'hsl(var(--mint-dark))'
 				},
@@ -65,11 +67,19 @@ export default {
 					light: 'hsl(var(--coral-light))',
 					dark: 'hsl(var(--coral-dark))'
 				},
+				peach: {
+					DEFAULT: 'hsl(var(--peach))',
+					soft: 'hsl(var(--peach-soft))'
+				},
+				
 				lavender: {
 					DEFAULT: 'hsl(var(--lavender))',
 					light: 'hsl(var(--lavender-light))',
-					dark: 'hsl(var(--lavender-dark))'
+					dark: 'hsl(var(--lavender-dark))',
+					soft: 'hsl(var(--lavender-soft))'
 				},
+				'warm-gray': 'hsl(var(--warm-gray))',
+				success: 'hsl(var(--success))',
 				'baby-blue': {
 					DEFAULT: 'hsl(var(--baby-blue))',
 					light: 'hsl(var(--baby-blue-light))',

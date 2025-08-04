@@ -11,7 +11,7 @@ interface BuddiesSectionProps {
 export const BuddiesSection = ({ onWaitlistClick }: BuddiesSectionProps) => {
   const buddies = [
     {
-      title: "🍼 Nibble Tales (Ages 1–3)",
+      title: "🧸 Nibble Tales (Ages 1–3)",
       image: nibbleImage,
       features: [
         "AR buddy pops out of table cards",
@@ -35,7 +35,7 @@ export const BuddiesSection = ({ onWaitlistClick }: BuddiesSectionProps) => {
       borderColor: "border-baby-blue"
     },
     {
-      title: "🎯 HaloWise (Ages 10+)",
+      title: "🚀 HaloWise (Ages 10+)",
       image: halowiseImage,
       features: [
         "Smart screen use tracker & feedback nudges",
@@ -53,7 +53,7 @@ export const BuddiesSection = ({ onWaitlistClick }: BuddiesSectionProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            🧩 Choose Your Screen-Time Buddy
+            Your Buddy for Every Stage 🌟
           </h2>
         </div>
         

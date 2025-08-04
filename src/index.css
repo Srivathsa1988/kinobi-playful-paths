@@ -49,6 +49,11 @@ All colors MUST be HSL.
     --mint: 156 35% 65%;
     --mint-light: 156 35% 85%;
     --mint-dark: 156 35% 45%;
+    --mint-soft: 160 30% 95%;
+    --peach: 25 70% 85%;
+    --peach-soft: 25 50% 95%;
+    
+    --warm-gray: 30 8% 50%;
     
     --coral: 15 65% 80%;
     --coral-light: 15 65% 90%;
@@ -57,10 +62,15 @@ All colors MUST be HSL.
     --lavender: 270 25% 85%;
     --lavender-light: 270 25% 92%;
     --lavender-dark: 270 25% 75%;
+    --lavender-soft: 270 20% 95%;
     
     --baby-blue: 210 45% 85%;
     --baby-blue-light: 210 45% 92%;
     --baby-blue-dark: 210 45% 75%;
+
+    --success: 140 50% 50%;
+
+    
 
     /* Gentle gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--mint-light)), hsl(var(--baby-blue-light)));

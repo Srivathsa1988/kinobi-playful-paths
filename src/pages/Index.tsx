@@ -14,6 +14,7 @@ import KinobiSurvey from "@/components/Kinobi/KinobiSurvey";
 import { WaitlistModal } from "@/components/Kinobi/WaitlistModal";
 import { ParentQuotes } from '@/components/Kinobi/ParentQuotes';
 import { ExpertSection } from '@/components/Kinobi/ExpertSection';
+import { BuddyVariants } from '@/components/Kinobi/BuddyVariants';
 
 
 const Index = () => {
@@ -75,7 +76,8 @@ const Index = () => {
         onQuizClick={() => handleQuizClick('hero')} 
       />
       
-      <BuddiesSection onWaitlistClick={(title) => handleWaitlistClick(title)} />
+      {/*<BuddiesSection onWaitlistClick={(title) => handleWaitlistClick(title)} />*/}
+      <BuddyVariants onWaitlistClick={(title) => handleWaitlistClick(title)} />
 
       <ParentQuotes />
       <ExpertSection />
