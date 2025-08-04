@@ -21,16 +21,16 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
       <div className="absolute bottom-40 left-20 w-10 h-10 bg-mint-light rounded-full opacity-25 animate-bounce" style={{animationDelay: '2s'}} />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
           🌱 Raise mindful kids in a digital world —{" "}
-          <span className="text-mint-dark font-semibold">without fights, force, or guilt</span>
+          <span className="text-slate-900 font-semibold">without fights, force, or guilt</span>
         </h1>
         
         <div className="max-w-3xl mx-auto mb-8">
-          <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
-            Meet <strong className="text-mint-dark font-semibold">Kinobi</strong> — screen-time rituals designed for real connection, not just control.
+          <p className="text-lg sm:text-xl text-slate-900 leading-relaxed">
+            Meet <strong className="text-slate-900 font-semibold">Kinobi</strong> — screen-time rituals designed for real connection, not just control.
           </p>
-          <p className="text-lg sm:text-xl text-slate-700 leading-relaxed mt-2">
+          <p className="text-lg sm:text-xl text-slate-900 leading-relaxed mt-2">
             AR stories, playful prompts & smart guidance that grow with your child.
           </p>
         </div>
