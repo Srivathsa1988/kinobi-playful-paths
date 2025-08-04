@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import nibbleImage from "@/assets/nibble-tales-hero.jpg";
+import cowatchImage from "@/assets/cowatch-jr-hero.jpg";
+import halowiseImage from "@/assets/halowise-hero.jpg";
 
 interface BuddyVariantsProps {
   onWaitlistClick: (product: string) => void;
@@ -12,6 +15,7 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
       name: "Nibble Tales",
       age: "1-3 years",
       emoji: "🧸",
+      image: nibbleImage,
       color: "bg-peach-soft",
       features: [
         "AR buddy pops out of table cards",
@@ -26,6 +30,7 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
       name: "Growing Mind Buddy",
       age: "5-9 years",
       emoji: "🌱",
+      image: cowatchImage,
       color: "bg-mint-soft",
       features: [
         "Educational content curation",
@@ -40,6 +45,7 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
       name: "Independence Buddy",
       age: "10-13 years",
       emoji: "🚀",
+      image: halowiseImage,
       color: "bg-lavender-soft",
       features: [
         "Digital citizenship education",
@@ -52,7 +58,7 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section id="buddy-variants" className="py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
@@ -71,6 +77,14 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="text-center mb-6">
+                <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg">
+                  <img 
+                    src={variant.image} 
+                    alt={variant.name}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent" />
+                </div>
                 <div className="text-4xl mb-3">{variant.emoji}</div>
                 <h3 className="text-xl font-bold text-foreground mb-2">
                   {variant.name}

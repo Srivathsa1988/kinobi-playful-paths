@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-main.jpg";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 interface HeroSectionProps {
   onWaitlistClick: () => void;
@@ -7,6 +9,16 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) => {
+  const [scrollIndicatorVisible, setScrollIndicatorVisible] = useState(true);
+
+  const handleScrollToBuddies = () => {
+    setScrollIndicatorVisible(false);
+    const buddiesSection = document.getElementById('buddy-variants');
+    if (buddiesSection) {
+      buddiesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
       {/* Background image with overlay */}
@@ -53,14 +65,36 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
           >
             Take a 30-sec Quiz
           </Button>
+
+          {scrollIndicatorVisible && (
+            <div className="lg:hidden">
+            {/*<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 lg:hidden">*/}
+              <button
+                onClick={handleScrollToBuddies}
+                className="flex flex-col items-center space-y-2 p-4 text-warm-gray hover:text-foreground transition-colors duration-300 group"
+                aria-label="Scroll to see buddy options"
+              >
+                <span className="text-sm font-medium text-center">
+                  See which buddy fits your child 👇
+                </span>
+                <div className="flex flex-col items-center animate-bounce">
+                  <ChevronDown className="h-6 w-6 group-hover:text-primary transition-colors" />
+                  <ChevronDown className="h-6 w-6 -mt-3 opacity-50 group-hover:text-primary transition-colors" />
+                </div>
+              </button>
+            </div>
+          )
+          }
         </div>
         
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        {/*<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
             <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
           </div>
-        </div>
+        </div>*/}
+        {/* Scroll Indicator */}
+      
       </div>
     </section>
   );
