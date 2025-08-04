@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
 import { useKinobiSurvey } from '@/hooks/useKinobiSurvey';
@@ -37,6 +37,7 @@ const surveyData: Question[] = [
 export default function KinobiSurvey() {
   const [step, setStep] = useState<number>(0);
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [selectedOption, setSelectedOption] = useState<string>(""); // <-- Add this
 
   const questions2D = surveyData.map(q => [q.question, ...q.options]);
 
@@ -45,7 +46,13 @@ export default function KinobiSurvey() {
   const current: Question = surveyData[step];
   const percent = ((step + 1) / surveyData.length) * 100;
 
+  // When step changes, update selectedOption to reflect saved answer (if any)
+  useEffect(() => {
+    setSelectedOption("");
+  }, [step]);
+
   const handleNext = () => {
+    saveAnswer(step, selectedOption); // Persist only on Next
     if (step < surveyData.length - 1) setStep(step + 1);
   };
 
@@ -54,15 +61,16 @@ export default function KinobiSurvey() {
   };
 
   const handleOptionSelect = (option: string) => {
-    saveAnswer(step, option); // this will persist to backend
+    setSelectedOption(option); // Only update local state
+    //saveAnswer(step, selectedOption); // Persist only on Next
   };
 
-  const isSelected = (option: string) => answers[step] === option;
+  const isSelected = (option: string) => selectedOption === option;
 
   const handleSubmit = () => {
     console.log("Submitted survey answers:", answers);
+    saveAnswer(step, selectedOption); // Persist only on Submit
     setSubmitted(true);
-    // Optional: You can trigger a final `onComplete` callback or show a thank-you screen
   };
 
   if (submitted) {
@@ -98,9 +106,9 @@ export default function KinobiSurvey() {
       <div className="flex justify-between">
         <Button variant="outline" onClick={handlePrev} disabled={step === 0}>Previous</Button>
         {step === surveyData.length - 1 ? (
-          <Button onClick={handleSubmit} disabled={!answers[step]}>Submit</Button>
+          <Button onClick={handleSubmit} disabled={!selectedOption}>Submit</Button>
         ) : (
-          <Button onClick={handleNext} disabled={!answers[step]}>Next</Button>
+          <Button onClick={handleNext} disabled={!selectedOption}>Next</Button>
         )}
       </div>
     </div>
