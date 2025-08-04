@@ -67,8 +67,8 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
           </Button>
 
           {scrollIndicatorVisible && (
-            <div className="lg:hidden">
-            {/*<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 lg:hidden">*/}
+            <div>
+            {/* <div className="lg:hidden"> <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 lg:hidden">*/}
               <button
                 onClick={handleScrollToBuddies}
                 className="flex flex-col items-center space-y-2 p-4 text-warm-gray hover:text-foreground transition-colors duration-300 group"
