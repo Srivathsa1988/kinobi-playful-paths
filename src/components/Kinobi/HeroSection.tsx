@@ -54,6 +54,7 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
             size="xl" 
             onClick={onWaitlistClick}
             className="w-full sm:w-auto"
+            data-gtm-event="click_hero_jwaitlist"
           >
             Join the Waitlist
           </Button>
@@ -62,6 +63,7 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
             size="xl" 
             onClick={onQuizClick}
             className="w-full sm:w-auto"
+            data-gtm-event="click_hero_takequiz"
           >
             Take a 30-sec Quiz
           </Button>
@@ -74,6 +76,7 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
                 onClick={handleScrollToBuddies}
                 className="flex flex-col items-center space-y-2 p-4 text-warm-gray hover:text-foreground transition-colors duration-300 group"
                 aria-label="Scroll to see buddy options"
+                data-gtm-event="click_hero_swipedown"
               >
                 <span className="text-sm font-medium text-center">
                   See which buddy fits your child 👇

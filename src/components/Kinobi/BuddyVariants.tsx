@@ -23,7 +23,8 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
         "Encourages co-feeding, not screen-feeding",
         "Creates emotional rituals with your child"
       ],
-      description: "Supporting your little one's first digital experiences with care and wisdom."
+      description: "Supporting your little one's first digital experiences with care and wisdom.",
+      gtm_track_tag: "click_buddy_jwtoddler"
     },
     {
       id: "child",
@@ -38,7 +39,8 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
         "Creative digital activities",
         "Attention span development"
       ],
-      description: "Nurturing curiosity while building healthy digital habits for growing minds."
+      description: "Nurturing curiosity while building healthy digital habits for growing minds.",
+      gtm_track_tag: "click_buddy_jwchild"
     },
     {
       id: "preteen",
@@ -53,7 +55,8 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
         "Balanced independence guidance",
         "Peer pressure navigation"
       ],
-      description: "Empowering pre-teens with confidence and responsibility in their digital journey."
+      description: "Empowering pre-teens with confidence and responsibility in their digital journey.",
+      gtm_track_tag: "click_buddy_jwpreteen"
     }
   ];
 
@@ -111,6 +114,7 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
                 variant="gentle" 
                 className="w-full" 
                 onClick={() => onWaitlistClick(variant.id)}
+                data-gtm-event = {variant.gtm_track_tag}
               >
                 Join Waitlist
               </Button>

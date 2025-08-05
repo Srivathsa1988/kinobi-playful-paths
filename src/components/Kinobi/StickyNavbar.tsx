@@ -35,6 +35,7 @@ export const StickyNavbar = ({ onWaitlistClick, onQuizClick }: StickyNavbarProps
               size="sm" 
               onClick={onQuizClick}
               className="hidden sm:inline-flex"
+              data-gtm-event="click_stickynav_takequiz"
             >
               Take Quiz
             </Button>
@@ -42,6 +43,7 @@ export const StickyNavbar = ({ onWaitlistClick, onQuizClick }: StickyNavbarProps
               variant="hero" 
               size="sm" 
               onClick={onWaitlistClick}
+              data-gtm-event="click_stickynav_jwaitlist"
             >
               Join Waitlist
             </Button>

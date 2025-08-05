@@ -27,6 +27,7 @@ export const CTASection = ({ onWaitlistClick, onQuizClick }: CTASectionProps) =>
                 size="xl" 
                 onClick={onWaitlistClick}
                 className="w-full sm:w-auto"
+                data-gtm-event="click_finalcta_jwaitlist"
               >
                 Join the Waitlist
               </Button>
@@ -35,6 +36,7 @@ export const CTASection = ({ onWaitlistClick, onQuizClick }: CTASectionProps) =>
                 size="xl" 
                 onClick={onQuizClick}
                 className="w-full sm:w-auto"
+                data-gtm-event="click_finalcta_takequiz"
               >
                 Take the 30-Second Quiz
               </Button>
