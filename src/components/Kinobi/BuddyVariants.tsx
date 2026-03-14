@@ -11,7 +11,7 @@ interface BuddyVariantsProps {
 export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
   const variants = [
     {
-      id: "toddler",
+      id: "jw_buddy_toddler",
       name: "Nibble Tales",
       age: "1-3 years",
       emoji: "🧸",
@@ -27,7 +27,7 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
       gtm_track_tag: "click_buddy_jwtoddler"
     },
     {
-      id: "child",
+      id: "jw_buddy_child",
       name: "Growing Mind Buddy",
       age: "5-9 years",
       emoji: "🌱",
@@ -43,7 +43,7 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
       gtm_track_tag: "click_buddy_jwchild"
     },
     {
-      id: "preteen",
+      id: "jw_buddy_preteen",
       name: "Independence Buddy",
       age: "10-13 years",
       emoji: "🚀",
@@ -111,6 +111,7 @@ export const BuddyVariants = ({ onWaitlistClick }: BuddyVariantsProps) => {
               </ul>
               
               <Button 
+                id = {variant.id}
                 variant="gentle" 
                 className="w-full" 
                 onClick={() => onWaitlistClick(variant.id)}

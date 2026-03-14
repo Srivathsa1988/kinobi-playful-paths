@@ -31,6 +31,7 @@ export const StickyNavbar = ({ onWaitlistClick, onQuizClick }: StickyNavbarProps
           
           <div className="flex items-center gap-3">
             <Button 
+              id = "tq_stickynav"
               variant="gentle" 
               size="sm" 
               onClick={onQuizClick}
@@ -41,6 +42,7 @@ export const StickyNavbar = ({ onWaitlistClick, onQuizClick }: StickyNavbarProps
             </Button>
             <Button 
               variant="hero" 
+              id = "jw_stickynav"
               size="sm" 
               onClick={onWaitlistClick}
               data-gtm-event="click_stickynav_jwaitlist"

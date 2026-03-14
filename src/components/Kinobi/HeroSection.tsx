@@ -50,6 +50,7 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
+            id = "jw_hero"
             variant="hero" 
             size="xl" 
             onClick={onWaitlistClick}
@@ -59,6 +60,7 @@ export const HeroSection = ({ onWaitlistClick, onQuizClick }: HeroSectionProps) 
             Join the Waitlist
           </Button>
           <Button 
+            id = "tq_hero"
             variant="gentle" 
             size="xl" 
             onClick={onQuizClick}

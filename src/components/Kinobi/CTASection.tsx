@@ -23,6 +23,7 @@ export const CTASection = ({ onWaitlistClick, onQuizClick }: CTASectionProps) =>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
+                id = "jw_endpage"
                 variant="hero" 
                 size="xl" 
                 onClick={onWaitlistClick}
@@ -32,6 +33,7 @@ export const CTASection = ({ onWaitlistClick, onQuizClick }: CTASectionProps) =>
                 Join the Waitlist
               </Button>
               <Button 
+                id = "tq_enpdage"
                 variant="coral" 
                 size="xl" 
                 onClick={onQuizClick}
